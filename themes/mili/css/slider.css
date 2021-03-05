@@ -1,0 +1,50 @@
+.morphist > *:not(.animated) {
+    display: none;
+}
+.js-rotating {
+  display: table-cell;
+  vertical-align: middle;
+}
+ul.js-rotating {
+  margin: 0;
+  padding: 0;
+}
+ul.js-rotating > li {
+  width: 60%;
+}
+.js-rotating p {
+  width: 80%;
+  font-size: 1.1em;
+}
+.slider {
+  position: relative;
+  display: block;
+  width: 100%;
+	z-index: 25;
+  color: #fff;
+}
+.slider > .container {
+  display: table;
+  height: 100%;
+}
+.slider li {
+	list-style: none;
+}
+.slider h1,
+.slider h2,
+.slider h3 {
+	margin-bottom: 20px;
+}
+.slider .button {
+	background: #222;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 4px;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+.slider .button:hover {
+	background: #fff;
+  color: #d1392b;
+}

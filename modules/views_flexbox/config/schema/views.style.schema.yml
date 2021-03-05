@@ -1,0 +1,25 @@
+views.style.flexbox:
+  type: views_style
+  label: 'Flexbox'
+  mapping:
+    style:
+      type:  string
+      label: 'CSS Library Attachement'
+    direction:
+      type:  string
+      label: 'Flex Direction'
+    justify:
+      type: boolean
+      label: 'Justify Content'
+    align_items:
+      type: string
+      label: 'Align Items'
+    align_content:
+      type: string
+      label: 'Align Content'
+    item_class_default:
+      type: boolean
+      label: 'Default item classes'
+    item_class_custom:
+      type: string
+      label: 'Custom item classes'

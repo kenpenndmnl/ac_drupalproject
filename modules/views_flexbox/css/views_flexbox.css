@@ -1,0 +1,78 @@
+.views-view-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+.views-view-flexbox .views-flexbox-item {
+  flex-grow: 1;
+}
+
+/** Flexbox display **/
+.views-view-flexbox.views-flexbox-direction-row {
+  flex-direction: row;
+}
+.views-view-flexbox.views-flexbox-direction-row-reverse {
+  flex-direction: row-reverse;
+}
+.views-view-flexbox.views-flexbox-direction-column {
+  flex-direction: column;
+}
+.views-view-flexbox.views-flexbox-direction-column-reverse {
+  flex-direction: column-reverse;
+}
+
+/** Flexbox justify content **/
+.views-view-flexbox.views-flexbox-justify-start {
+  justify-content: flex-start;
+}
+.views-view-flexbox.views-flexbox-justify-end {
+  justify-content: flex-end;
+}
+.views-view-flexbox.views-flexbox-justify-center {
+  justify-content: center;
+}
+.views-view-flexbox.views-flexbox-justify-space-between {
+  justify-content: space-between;
+}
+.views-view-flexbox.views-flexbox-justify-space-around {
+  justify-content: space-around;
+}
+.views-view-flexbox.views-flexbox-justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+/** Flexbox align items **/
+.views-view-flexbox.views-flexbox-align-items-start {
+  align-items: flex-start;
+}
+.views-view-flexbox.views-flexbox-align-items-end {
+  align-items: flex-end;
+}
+.views-view-flexbox.views-flexbox-align-items-center {
+  align-items: center;
+}
+.views-view-flexbox.views-flexbox-align-items-stretch {
+  align-items: stretch;
+}
+.views-view-flexbox.views-flexbox-align-items-baseline {
+  align-items: baseline;
+}
+
+/** Flexbox align content **/
+.views-view-flexbox.views-flexbox-align-content-start {
+  align-content: flex-start;
+}
+.views-view-flexbox.views-flexbox-align-content-end {
+  align-content: flex-end;
+}
+.views-view-flexbox.views-flexbox-align-content-center {
+  align-content: center;
+}
+.views-view-flexbox.views-flexbox-align-content-stretch {
+  align-content: stretch;
+}
+.views-view-flexbox.views-flexbox-align-content-space-between {
+  align-content: space-between;
+}
+.views-view-flexbox.views-flexbox-align-content-space-around {
+  align-content: space-around;
+}

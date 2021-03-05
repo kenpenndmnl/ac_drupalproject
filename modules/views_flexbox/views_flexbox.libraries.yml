@@ -1,0 +1,13 @@
+views_flexbox:
+  version: 1.x
+  css:
+    theme:
+      css/views_flexbox.css: {}
+
+views_flexbox.cards:
+  version: 1.x
+  dependencies:
+    - views_flexbox/views_flexbox
+  css:
+    theme:
+      css/views_flexbox.cards.css: {}

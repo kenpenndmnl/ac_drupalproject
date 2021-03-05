@@ -1,0 +1,11 @@
+name: Views Flexbox
+type: module
+description: Adds Flexbox layout to Views.
+package: Views
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+# Information added by Drupal.org packaging script on 2020-05-22
+version: '8.x-1.0-rc2'
+project: 'views_flexbox'
+datestamp: 1590157941

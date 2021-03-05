@@ -1,0 +1,71 @@
+<?php
+
+/**
+ * @file
+ * Provides an module functionality.
+ */
+
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Prepares variables for views grid style templates.
+ *
+ * Default template: views-view-grid.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - view: The view object.
+ *   - rows: An array of row items. Each row is an array of content.
+ */
+function template_preprocess_views_view_flexbox(array &$variables) {
+  $style_plugin = $variables['view']->style_plugin;
+
+  $variables['options'] = $style_plugin->options;
+  $variables['#attached']['library'][] = 'views_flexbox/views_flexbox';
+
+  if (isset($variables['options']['style'])) {
+
+    if ($variables['options']['style'] === '_NONE_') {
+      unset($variables['options']['style']);
+    }
+    else {
+      $libraries = [
+        'cards' => 'views_flexbox/views_flexbox.cards',
+      ];
+      if (isset($libraries[$variables['options']['style']])) {
+        $variables['#attached']['library'][] = $libraries[$variables['options']['style']];
+      }
+    }
+  }
+
+  $items = [];
+
+  // Iterate over each rendered views result row.
+  foreach ($variables['rows'] as $result_index => $item) {
+
+    $item_attributes = [
+      'class' => [],
+    ];
+
+    // Add custom classes.
+    $custom_classes = array_filter(explode(' ', $style_plugin->getCustomClass($result_index, 'item')));
+    if (!empty($custom_classes)) {
+      $item_attributes['class'] = array_merge($item_attributes['class'], $custom_classes);
+    }
+
+    $item = [
+      'content' => $item,
+      'attributes' => new Attribute($item_attributes),
+    ];
+
+    if ($variables['options']['link_to_content']) {
+      $item['link'] = $style_plugin->getLinkLocation($result_index);
+    }
+
+    $items[$result_index] = $item;
+
+  }
+
+  // Add items to the variables array.
+  $variables['items'] = $items;
+}

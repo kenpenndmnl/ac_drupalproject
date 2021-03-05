@@ -1,0 +1,61 @@
+# Global stylings, css. These will be loaded on every pages.
+global-styling:
+  version: 1.0
+  css:
+   base:
+      css/base.css: {}
+   component:
+      css/components.css: { weight: 800 }
+   layout:
+      css/responsive.css: { weight: 900 }
+   theme:
+      css/style.css: {}
+
+# Global Javascripts. These will be loaded on every pages.
+global-scripts:
+  version: 1.0
+  js:
+     js/mili.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+# Slider
+slider:
+  version: 2.1.2
+  css:
+    component:
+      css/slider.css: {}
+  header: true
+  js:
+    js/slider.js: {}
+  dependencies:
+    - core/jquery
+
+# FontAwesome
+fontawesome:
+  version: 4.7.0
+  css:
+    component:
+      css/font-awesome.css: {}
+
+# Google Material Icons
+material:
+  version: 3.0.1
+  css:
+    component:
+      css/material.css: {}
+
+# Book
+book:
+  version: VERSION
+  css:
+    component:
+      css/book.css: {}
+
+# maintenance page
+maintenance:
+  version: 1.0
+  css:
+    theme:
+      css/maintenance.css: {}

@@ -1,0 +1,79 @@
+<!-- Start: Footer -->
+<footer class="footer">
+  <div class="container">
+  {% if page.footer_top %}
+    <section id="footer-top">
+      <div class="footer-top">
+        {{ page.footer_top }}
+      </div>
+    </section>
+  {% endif %}<!-- /footer-top -->
+
+  {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
+   <section id="footer-blocks">
+      <div class="full footer-blocks">
+         <div class="one_four_first footer-block">
+            {% if page.footer_first %}
+               {{ page.footer_first }}
+            {% endif %}
+         </div> <!--/footer-first -->
+
+         <div class="one_four footer-block">
+            {% if page.footer_second %}
+               {{ page.footer_second }}
+            {% endif %}
+         </div> <!--/footer-second -->
+
+         <div class="one_four footer-block">
+            {% if page.footer_third %}
+               {{ page.footer_third }}
+            {% endif %}
+         </div> <!--/footer-three -->
+
+         <div class="one_four one_four_last footer-block">
+            {% if page.footer_fourth %}
+               {{ page.footer_fourth }}
+            {% endif %}
+         </div> <!--/footer-fourth -->
+      </div> <!-- /.full -->
+   </section> <!--/footer-blocks -->
+ {% endif %} {# end if for footer one, two, three, four blocks #}
+
+ {% if copyright_text or all_icons_show or page.footer_bottom %}
+  <section id="footer-bottom">
+    {% if copyright_text or all_icons_show %}
+      <div class="footer-bottom-section full">
+      {% if copyright_text %}
+        <div class="one_half">
+          <div class="copyright">
+            &copy; {{ "now"|date("Y") }} {{ site_name }}, All rights reserved.
+          </div>
+        </div> <!-- /.one_half -->
+        <div class="one_half text_right">
+      {% else %}
+        <div class="text_right">
+      {% endif %}
+        {% include '@mili/template-parts/social-icons.html.twig' %}
+      </div> <!--/.text_right -->
+      </div> <!--/.full -->
+    {% endif %} <!-- end condition if copyright or social icons -->
+    {% if page.footer_bottom %}
+      <div class="footer-bottom">
+        {{ page.footer_bottom }}
+      </div> <!--/.footer-bottom -->
+    {% endif %}
+  </section> <!-- /footer-bottom -->
+  {% endif %}
+
+  </div><!-- /.container -->
+</footer>
+{% if scrolltotop_on %}
+<div class="scrolltop"><i class="icon-angle-up"></i></div>
+{% endif %}
+<!-- End: Footer -->
+{% if font_icon_fontawesome %}
+{{ attach_library('mili/fontawesome') }}
+{% endif %}
+{% if font_icon_material %}
+{{ attach_library('mili/material') }}
+{% endif %}
